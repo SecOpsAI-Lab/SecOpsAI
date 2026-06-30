@@ -1,3 +1,22 @@
+
+
+services:
+
+  # ── MLflow — Experiment tracking for Member 3 and Member 4 ──
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.9.2
+    container_name: secopsai-mlflow
+    ports:
+      - "5000:5000"           # access at http://localhost:5000
+    volumes:
+      - ./mlflow_data:/mlflow  # saves experiment data to your disk
+    command: >
+      mlflow server
+      --backend-store-uri sqlite:///mlflow/mlflow.db
+      --default-artifact-root /mlflow/artifacts
+      --host 0.0.0.0
+      --port 5000
+    restart: unless-stopped
 version: '3.8'
 
 services:
