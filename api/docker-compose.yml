@@ -1,0 +1,17 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      ALLOWED_API_KEYS: "dev-sensor-001,dev-sensor-002"
+      MODEL_PATH: "models/ml/xgboost_detector.pkl"
+      SCALER_PATH: "models/scaler.pkl"
+      FEATURE_NAMES_PATH: "data/processed/feature_names.json"
+    depends_on:
+      - postgres
+    restart: unless-stopped
