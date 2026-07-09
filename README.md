@@ -1,4 +1,4 @@
- Member 6 — SecOps, Pipeline & Observability Engineer
+ Member 6 - SecOps, Pipeline & Observability Engineer
 
 ## SecOpsAI-Adversarial AI Detection Engineering Project
 **Expadox Lab | Cohort 2, 2026**
@@ -6,7 +6,7 @@
 ---
 
 ## Overview
-As Member 6, I built the final integration layer of the SecOpsAI platform —
+As Member 6, I built the final integration layer of the SecOpsAI platform-
 wiring the full detection pipeline from alert enrichment to automated 
 containment, real-time dashboards, and CI/CD regression testing.
 
